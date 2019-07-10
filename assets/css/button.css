@@ -1,0 +1,46 @@
+*{padding:0;margin:0;}
+
+body{
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:18px;
+	background-color:#CCC;
+}
+
+.float{
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:45px;
+	right:40px;
+	background-color:#0C9;
+	color:#fff;
+	border-radius:50px;
+	text-align:center;
+	box-shadow: 2px 2px 3px #333;
+}
+
+.float img{
+    width: 60px;
+    height: 60px;
+}
+
+.my-float{
+    /* margin-top:22px; */
+}
+
+.fab-1{
+    right: 110px;
+	background-color:white;
+}
+
+.fab-2{
+	background-color:white;
+    right: 180px;
+}
+
+.fab-3{
+	background-color:white;
+    right: 250px;
+}
+
+/* https://codepen.io/androidcss/pen/yOopGp */

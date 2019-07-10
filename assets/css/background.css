@@ -1,0 +1,51 @@
+.display {
+  background: url('../img/bg/bg-00.jpg');
+    /* radial-gradient(circle, transparent 40%, var(--color-v) 75%), */
+    /* linear-gradient(to right, var(--color), var(--color)), */
+    /* var(--image2); */
+  background-position: center center;
+  background-size: cover;
+  
+  /* Add the blur effect */  
+  filter: blur(5px) sepia(90%) hue-rotate(195deg) saturate(600%);
+  -webkit-filter: blur(5px) sepia(90%) hue-rotate(195deg) saturate(600%);  
+
+  flex: 1;
+  width: 100vw;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background: black;
+}
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* Addition for Edge, typically would do the inverse, but for a demo, using the negation support check */
+@supports not (background-blend-mode: saturation) {
+  .display {
+    --color: transparent;
+  }
+  form {
+    position: relative;
+  }
+  form::after {
+    content: 'Blend Modes are not supported in this browser';
+    background: rgba(0,0,0,.95);
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  } 
+}
